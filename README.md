@@ -1,17 +1,19 @@
 # smd-app
 
-Personal finance ledger: balances, spending and monthly reports from a CSV file.
+Personal finance ledger for the command line: balances, spending and monthly reports, stored in a SQLite database.
 
 ## Run it
 
+    uv run ledger import
     uv run ledger balance
     uv run ledger spending
     uv run ledger months
+    uv run ledger add checking -12.50 restaurants "Lunch"
+
+Amounts are stored as Decimal values (NUMERIC), never as floats. `import` loads `data/transactions.csv` by default and skips rows that are already in the database.
 
 ## Roadmap
 
-- Monthly report of income and spending
-- A database instead of a CSV file
 - A web API and a dashboard
 
 ## Author

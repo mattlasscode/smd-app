@@ -1,15 +1,16 @@
 [project]
 name = "ledger"
 version = "0.1.0"
-description = "Personal finance ledger: balances, spending and monthly reports from a CSV file."
+description = "Personal finance ledger with a SQLite database"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "rich>=15.0.0",
+    "sqlalchemy>=2.1.9",
 ]
 
 [project.scripts]
-ledger = "ledger:main"
+ledger = "ledger.cli:main"
 
 [build-system]
 requires = ["uv_build>=0.13.7,<0.14.0"]
@@ -19,3 +20,6 @@ build-backend = "uv_build"
 dev = [
     "ruff>=0.17.4",
 ]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
