@@ -6,6 +6,7 @@ Personal finance ledger: balances, spending and monthly reports from a CSV file.
 
     uv run ledger balance
     uv run ledger spending
+    uv run ledger months
 
 ## Roadmap
 
@@ -13,6 +14,6 @@ Personal finance ledger: balances, spending and monthly reports from a CSV file.
 - A database instead of a CSV file
 - A web API and a dashboard
 
-## Author 
+## Author
 
 mattlasscode - Matthieu Lassiouve
