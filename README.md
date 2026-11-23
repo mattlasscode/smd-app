@@ -12,6 +12,10 @@ Personal finance ledger for the command line: balances, spending and monthly rep
 
 Amounts are stored as Decimal values (NUMERIC), never as floats. `import` loads `data/transactions.csv` by default and skips rows that are already in the database.
 
+## Tests
+
+    uv run pytest
+
 ## Roadmap
 
 - A web API and a dashboard
